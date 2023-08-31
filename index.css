@@ -1,0 +1,373 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+  /* width: 100%; */
+  font-family: SoDoSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  /* https://stackoverflow.com/questions/5218927/z-index-not-working-with-fixed-positioning  */
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* overflow-wrap: break-word; */
+}
+
+/* https://codepen.io/tag/mobile-menu */
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Fronts */
+/* body {
+    font-family: 'Barlow', sans-serif;
+    font-family: 'Fraunces', serif; 
+
+    font-family: SoDoSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+} */
+
+/* :root {
+    
+} */
+
+/* Navbar styles for Desktop */
+
+.header-container {
+  width: 100%;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+.nav-container {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 1.8rem 0;
+
+  position: relative;
+}
+
+.logo-nav-btns-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* navbar styles left side */
+.logo-nav-flex {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+.logo svg {
+  width: 49.36px;
+  height: 49.36px;
+}
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.nav-items li a {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  color: rgba(0, 0, 0, 0.87);
+}
+.nav-items li a:hover {
+  color: #00754a;
+}
+
+/* navbar right side */
+.find-buttons-container {
+  display: flex;
+  gap: 3rem;
+}
+.find-store {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.find-store svg {
+  width: 15px;
+  height: 21px;
+}
+.find-store-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+.find-store a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.87);
+}
+.find-store a:hover {
+  color: #00754a;
+  fill: #00754a;
+}
+
+/* buttns styles */
+.btns-flex-parent {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.sign-in-btn {
+  padding: 0.4rem 1rem;
+  border: 1px solid black;
+  border-radius: 500px;
+}
+.sign-in-btn a {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.87);
+}
+.sign-in-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.join-now-btn {
+  padding: 0.4rem 1rem;
+  background-color: black;
+  border-radius: 500px;
+}
+.join-now-btn a {
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.join-now-btn:hover {
+  opacity: 0.7;
+}
+
+/* main container styles for desktop */
+.main-parent-container {
+  width: 100%;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+.main-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+.main-content {
+  display: flex;
+  margin-top: 2rem;
+}
+.main-text {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 5rem 0;
+}
+.main-text-header h1 {
+  font-size: 3rem;
+  width: 15ch;
+  text-align: center;
+  line-height: 1.2;
+}
+.main-text-text p {
+  font-size: 1.5rem;
+  width: 39ch;
+  text-align: center;
+}
+
+.main-img {
+  flex: 1;
+}
+
+.main-note p {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+/* main btns styles */
+.main-content-btn {
+  padding: 0.44rem 1rem;
+  border: 1px solid black;
+  border-radius: 500px;
+}
+
+/* helper classes for background colors */
+.purple-bg {
+  background-color: #8f8bf4;
+}
+.pink-bg {
+  background-color: #eb81a5;
+}
+.neon-yellow-bg {
+  background-color: #f1ff67;
+}
+.red-bg {
+  background-color: tomato;
+}
+
+/* footer styles desktop */
+.footer-container {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
+}
+.footer-nav {
+  display: flex;
+  gap: 2.5rem;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.footer-links h1 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.footer-links ul li {
+  margin-bottom: 1rem;
+  width: 20ch;
+}
+.footer-links ul li a {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.58);
+}
+.footer-links ul li a:hover {
+  color: black;
+}
+
+.footer-socials {
+  padding-top: 2rem;
+  width: 100%;
+  max-width: 1360px;
+}
+
+/* help classes for border on right side or left */
+.left-border-line {
+  border-left: 2px solid rgba(0, 0, 0, 0.58);
+}
+.right-border-line {
+  border-right: 2px solid rgba(0, 0, 0, 0.58);
+}
+.padding-left {
+  padding-left: 1rem;
+}
+
+/* footer socials for desktop */
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-info-links {
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.footer-info-links a {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.87);
+  padding-right: 1rem;
+}
+.footer-info-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-copyright p {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.58);
+}
+
+/* media query for larger screens */
+@media (min-width: 1606px) {
+  .nav-container {
+    max-width: 1440px;
+  }
+  .logo-nav-flex {
+    position: relative;
+  }
+  .logo {
+    position: absolute;
+    left: -5rem;
+  }
+}
+
+/* media query for smaller desktop screens */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main-text-header h1 {
+    font-size: 2.5rem;
+  }
+  .main-text-text p {
+    font-size: 1rem;
+  }
+  .footer-container {
+    padding-inline: 2.5rem;
+  }
+  .footer-nav {
+    gap: 0.5rem;
+  }
+}
